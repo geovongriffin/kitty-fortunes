@@ -13,37 +13,55 @@ BY: SHIRLEEN, LIZ, NATALIE, AND GEO
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Main Styles */
 #app {
-    margin: 56px auto;
-    background: var(--bulma-black-lighter);
-    border: 1px solid var(--bulma-grey-lighter);
-    border-radius: 8px;
-    width: calc(100vw - 40px);
-    height: 320px;
+  margin: 56px auto;
+  background: var(--bulma-black-lighter);
+  border: 1px solid var(--bulma-grey-lighter);
+  border-radius: 8px;
+  width: calc(100vw - 40px);
 }
 /* Breakpoints */
 
 /* xs devices (phones, 600px -) */
 @media only screen and (max-width: 600px) {
-
 }
 /* s devices (portrait tablets and large phones, 600px +) */
 @media only screen and (min-width: 600px) {
-
 }
 /* m devices (landscape tablets, 768px +) */
 @media only screen and (min-width: 768px) {
-
 }
 /* l devices (laptops/desktops, 992px +) */
 @media only screen and (min-width: 992px) {
-
 }
 /* xl devices (large laptops and desktops, 1200px +) */
 @media only screen and (min-width: 1200px) {
+}
 
+
+
+/* ===== Header layout fix ===== */
+#header-section {
+  display: block;
+
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 0 auto 2rem auto;
+}
+
+/* Main title style */
+#site-title {
+  font-size: 2.5rem; 
+  margin: 0 0 0.5rem; 
+}
+
+/* Tagline under the title */
+#site-tagline {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #555;
 }
