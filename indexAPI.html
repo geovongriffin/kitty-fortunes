@@ -22,7 +22,7 @@
         <section id="app">
             <!--Section A: Question Form-->
             <section id="questionSection">
-                <h2 class="section-title">Start Your Kitty Fortune</h2>
+                <h2 class="sectionTitle">Start Your Kitty Fortune</h2>
 
                 <form id="fortuneForm">
                     <!-- I took out the option to select by mood because the Cat API is not super robust and doesn't have enough tagged images to create valid combos. E.g., choosing something like "relaxed" and then "calico" can return a 404 error with the API. It was too hard to manually figure out which were robust combos. Leaving this here in case anyone else better ideas on how to resolve. -NR -->
@@ -46,7 +46,7 @@
 
                     <!--Question Input-->
                     <label for="typeDropdown" class="form-label">Choose your cat style</label>
-                    <select class="form-select" id="typeDropdown">
+                    <select class="formSelect" id="typeDropdown">
                         <option value="" disabled selected>Pick a cat vibe</option>
                         <option value="cute">Cute</option>
                         <option value="funny">Funny</option>
@@ -67,7 +67,7 @@
 
                     <!-- Advice Topic -->
                     <label for="topicDropdown" class="form-label">What kind of advice?</label>
-                    <select class="form-select" id="topicDropdown">
+                    <select class="formSelect" id="topicDropdown">
                         <option value="" disabled selected>Select a topic</option>
                         <option value="Business">Work</option>
                         <option value="Love">Love</option>
@@ -89,7 +89,7 @@
 
             <!-- Section B: Result Display -->
             <section class="is-hidden" id="result">
-                <h2 class="section-title">Your Kitty Fortune</h2>
+                <h2 class="sectionTitle">Your Kitty Fortune</h2>
 
                 <article id="fortuneCard">
                     <!-- Cat image placeholder -->
@@ -112,7 +112,7 @@
 
             <!--Section C: Favorites-->
             <section id="favorites">
-                <h2 class="section-title">Saved Favorites</h2>
+                <h2 class="sectionTitle">Saved Favorites</h2>
                 <div id="favoritesContainer"></div>
             </section>
             <!--Section D: Errors-->
