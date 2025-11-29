@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
     <title>Kitty Fortunes 🐾</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"> -->
     <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 
@@ -26,24 +27,42 @@
 
                 <form id="fortuneForm">
                     <!--Mood Choice-->
-                    <label for="moodDropdown" class="form-label">What mood are you in?</label>
+                    <!-- <label for="moodDropdown" class="form-label">What mood are you in?</label>
                     <select class="form-select" id="moodDropdown">
                         <option value="" disabled selected>Select your mood</option>
+                        <option value="confused">Confused</option>
                         <option value="happy">Happy</option>
-                        <option value="calm">Calm</option>
-                        <option value="stressed">Stressed</option>
+                        <option value="relaxed">Relaxed</option>
+                        <option value="angry">Angry</option>
+                        <option value="annoyed">Annoyed</option>
+                        <option value="bored">Bored</option>
+                        <option value="silly">Silly</option>
+                        <option value="sleepy">Sleepy</option>
                         <option value="sad">Sad</option>
                         <option value="tired">Tired</option>
-                    </select>
+                        <option value="playful">Playful</option>
+                    </select> -->
 
                     <!--Question Input-->
                     <label for="typeDropdown" class="form-label">Choose your cat style</label>
                     <select class="form-select" id="typeDropdown">
                         <option value="" disabled selected>Pick a cat vibe</option>
+                        <option value="nacho">Nacho</option>
                         <option value="cute">Cute</option>
                         <option value="funny">Funny</option>
                         <option value="grumpy">Grumpy</option>
                         <option value="sad">Sad</option>
+                        <option value="tabby">Tabby</option>
+                        <option value="calico">Calico</option>
+                        <option value="fluffy">Fluffy</option>
+                        <option value="orange">Orange</option>
+                        <option value="ginger">Ginger</option>
+                        <option value="grumpy">Grumpy</option>
+                        <option value="himalayan">Himalayan</option>
+                        <option value="nyan">Nyan</option>
+                        <option value="persian">Persian</option>
+                        <option value="siamese">Siamese</option>
+                        <option value="spooked">Spooked</option>
                     </select>
 
                     <!-- Advice Topic -->
@@ -58,23 +77,23 @@
                     </select>
 
                     <!-- Styling for primary (Generate) and secondary (Surprise Me) actions -->
-                    <button id="generateBtn" type="submit" class="primary-btn">
+                    <button id="generateBtn" type="submit" class="button is-primary">
                         Generate Fortune
                     </button>
 
-                    <button id="surpriseBtn" type="button" class="secondary-btn">
+                    <button id="surpriseBtn" type="button" class="button is-secondary">
                         Surprise Me
                     </button>
                 </form>
             </section>
 
             <!-- Section B: Result Display -->
-            <section id="result">
+            <section class="is-hidden" id="result">
                 <h2 class="section-title">Your Kitty Fortune</h2>
 
                 <article id="fortuneCard">
                     <!-- Cat image placeholder -->
-                    <img id="catGIF" src="" alt="Your cat GIF will appear here" />
+                    <img id="catImg" src="" alt="Your cat GIF will appear here" />
 
                     <!-- Quote text -->
                     <p id="quoteText">
@@ -91,6 +110,12 @@
                 <h2 class="section-title">Saved Favorites</h2>
                 <div id="favoritesContainer"></div>
             </section>
+            <!--Section D: Errors-->
+            <section class="has-text-danger is-hidden" id="errorMessage">
+                <p>Something went wrong. Please try again.</p>
+            </section>
+        </section>
+
         </section>
     </main>
 
