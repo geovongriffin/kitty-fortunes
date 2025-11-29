@@ -25,7 +25,7 @@ async function catQuery(type) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error(`Response status: ${response.status}`);
+            throw new Error(`Cat response status: ${response.status}`);
         }
         updateResults(response.url);
     } catch (error) {
@@ -36,7 +36,6 @@ async function catQuery(type) {
 
 function updateResults(url) {
     errorMessage.classList.toggle('is-hidden');
-    document.getElementById('result').classList.remove('is-hidden');
     catImg.src = url;
 };
 
