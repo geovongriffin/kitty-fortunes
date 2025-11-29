@@ -11,7 +11,7 @@
 
 <body>
     <!--Site Title / Description-->
-    <header id="header">
+    <header id="headerSection">
         <h1 id="siteTitle">Kitty Fortunes 😺✨</h1>
         <p id="siteTagline">
             Discover your future with a purr-fect fortune from our feline friends!
@@ -23,7 +23,6 @@
             <!--Section A: Question Form-->
             <section id="questionSection">
                 <h2 class="sectionTitle">Start Your Kitty Fortune</h2>
-
                 <form id="fortuneForm">
                     <!-- I took out the option to select by mood because the Cat API is not super robust and doesn't have enough tagged images to create valid combos. E.g., choosing something like "relaxed" and then "calico" can return a 404 error with the API. It was too hard to manually figure out which were robust combos. Leaving this here in case anyone else better ideas on how to resolve. -NR -->
 
@@ -88,7 +87,7 @@
             </section>
 
             <!-- Section B: Result Display -->
-            <section class="is-hidden" id="result">
+            <section class="is-hidden" id="resultSection">
                 <h2 class="sectionTitle">Your Kitty Fortune</h2>
 
                 <article id="fortuneCard">
@@ -101,7 +100,7 @@
 
                     <!-- Quote author -->
                     <p id="quoteAuthor"></p>
-                     <button id="regenerateBtn" type="button" class="button is-primary">
+                    <button id="regenerateBtn" type="button" class="button is-primary">
                         Regenerate
                     </button>
                     <button id="favoriteBtn" type="button" class="button is-secondary">
@@ -111,7 +110,7 @@
             </section>
 
             <!--Section C: Favorites-->
-            <section id="favorites">
+            <section id="favoritesSection">
                 <h2 class="sectionTitle">Saved Favorites</h2>
                 <div id="favoritesContainer"></div>
             </section>

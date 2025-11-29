@@ -60,7 +60,7 @@ async function fetchFortuneData(catType, quoteTopic) {
 
 function updateResults(catData, quoteData) {
     errorMessage.classList.add('is-hidden');
-    document.getElementById('result').classList.remove('is-hidden');
+    document.getElementById('resultSection').classList.remove('is-hidden');
     catImg.src = catData;
     document.getElementById('quoteText').innerHTML = quoteData[0].content;
     document.getElementById('quoteAuthor').innerHTML = quoteData[0].author;
