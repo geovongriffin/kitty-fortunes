@@ -1,104 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
     <title>Kitty Fortunes 🐾</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <!--Site Title / Description-->
     <header id="header-section">
-      <h1 id="site-title">Kitty Fortunes 😺✨</h1>
-      <p id="site-tagline">
-        Discover your future with a purr-fect fortune from our feline friends!
-      </p>
+        <h1 id="site-title">Kitty Fortunes 😺✨</h1>
+        <p id="site-tagline">
+            Discover your future with a purr-fect fortune from our feline friends!
+        </p>
     </header>
 
     <main>
-      <section id="app">
-        <!--Section A: Question Form-->
-        <section id="question-section">
-          <h2 class="section-title">Start Your Kitty Fortune</h2>
+        <section id="app">
+            <!--Section A: Question Form-->
+            <section id="question-section">
+                <h2 class="section-title">Start Your Kitty Fortune</h2>
 
-          <form id="fortune-form">
-            <!--Mood Choice-->
-            <label for="mood-select" class="form-label"
-              >What mood are you in?</label
-            >
-            <select id="mood-select" class="form-select">
-              <option value="" disabled selected>Select your mood</option>
-              <option value="happy">Happy</option>
-              <option value="calm">Calm</option>
-              <option value="stressed">Stressed</option>
-              <option value="sad">Sad</option>
-              <option value="tired">Tired</option>
-            </select>
+                <form id="fortune-form">
+                    <!--Mood Choice-->
+                    <label for="mood-select" class="form-label">What mood are you in?</label>
+                    <select id="mood-select" class="form-select">
+                        <option value="" disabled selected>Select your mood</option>
+                        <option value="happy">Happy</option>
+                        <option value="calm">Calm</option>
+                        <option value="stressed">Stressed</option>
+                        <option value="sad">Sad</option>
+                        <option value="tired">Tired</option>
+                    </select>
 
-            <!--Question Input-->
-            <label for="cat-type-select" class="form-label"
-              >Choose your cat style</label
-            >
-            <select id="cat-type-select" class="form-select">
-              <option value="" disabled selected>Pick a cat vibe</option>
-              <option value="cute">Cute</option>
-              <option value="funny">Funny</option>
-              <option value="grumpy">Grumpy</option>
-              <option value="sad">Sad</option>
-            </select>
+                    <!--Question Input-->
+                    <label for="cat-type-select" class="form-label">Choose your cat style</label>
+                    <select id="cat-type-select" class="form-select">
+                        <option value="" disabled selected>Pick a cat vibe</option>
+                        <option value="cute">Cute</option>
+                        <option value="funny">Funny</option>
+                        <option value="grumpy">Grumpy</option>
+                        <option value="sad">Sad</option>
+                    </select>
 
-            <!-- Advice Topic -->
-            <label for="topic-select" class="form-label"
-              >What kind of advice?</label
-            >
-            <select id="topic-select" class="form-select">
-              <option value="" disabled selected>Select a topic</option>
-              <option value="career">Career</option>
-              <option value="love">Love</option>
-              <option value="family">Family</option>
-              <option value="friends">Friends</option>
-              <option value="motivation">Motivation</option>
-            </select>
+                    <!-- Advice Topic -->
+                    <label for="topic-select" class="form-label">What kind of advice?</label>
+                    <select id="topic-select" class="form-select">
+                        <option value="" disabled selected>Select a topic</option>
+                        <option value="career">Career</option>
+                        <option value="love">Love</option>
+                        <option value="family">Family</option>
+                        <option value="friends">Friends</option>
+                        <option value="motivation">Motivation</option>
+                    </select>
 
-            <!-- Styling for primary (Generate) and secondary (Surprise Me) actions -->
-            <button id="generate-btn" type="submit" class="primary-btn">
-              Generate Fortune
-            </button>
+                    <!-- Styling for primary (Generate) and secondary (Surprise Me) actions -->
+                    <button id="generate-btn" type="submit" class="primary-btn">
+                        Generate Fortune
+                    </button>
 
-            <button id="random-btn" type="button" class="secondary-btn">
-              Surprise Me
-            </button>
-          </form>
+                    <button id="random-btn" type="button" class="secondary-btn">
+                        Surprise Me
+                    </button>
+                </form>
+            </section>
+
+            <!-- Section B: Result Display -->
+            <section id="result-section">
+                <h2 class="section-title">Your Kitty Fortune</h2>
+
+                <article id="fortune-card">
+                    <!-- Cat image placeholder -->
+                    <img id="cat-gif" src="" alt="Your cat GIF will appear here" />
+
+                    <!-- Quote text -->
+                    <p id="quote-text">
+                        Your Zen quote will appear here after you generate a fortune.
+                    </p>
+
+                    <!-- Quote author -->
+                    <p id="quote-author"></p>
+                </article>
+            </section>
+
+            <!--Section C: Favorites-->
+            <section id="favorites-section">
+                <h2 class="section-title">Saved Favorites</h2>
+                <div id="favorites-container"></div>
+            </section>
         </section>
-
-        <!-- Section B: Result Display -->
-        <section id="result-section">
-          <h2 class="section-title">Your Kitty Fortune</h2>
-
-          <article id="fortune-card">
-            <!-- Cat image placeholder -->
-            <img id="cat-gif" src="" alt="Your cat GIF will appear here" />
-
-            <!-- Quote text -->
-            <p id="quote-text">
-              Your Zen quote will appear here after you generate a fortune.
-            </p>
-
-            <!-- Quote author -->
-            <p id="quote-author"></p>
-          </article>
-        </section>
-
-        <!--Section C: Favorites-->
-        <section id="favorites-section">
-          <h2 class="section-title">Saved Favorites</h2>
-          <div id="favorites-container"></div>
-        </section>
-      </section>
     </main>
 
     <footer></footer>
     <script src="./assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>
