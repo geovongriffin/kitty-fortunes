@@ -48,7 +48,6 @@ async function fetchFortuneData(catType, quoteTopic) {
       throw new Error(`response status: ${response.status}`);
     }
 
-    // const catData = catResponse.url;
     const catData = await catResponse.json();
     const quoteData = await quoteResponse.json();
 
