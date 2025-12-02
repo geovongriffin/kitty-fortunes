@@ -28,10 +28,9 @@ BY: SHIRLEEN, LIZ, NATALIE, AND GEO
   --blue: #677B80;
   --yellow: #C4A44D;
   --green: #748530;
+  --green-light: #b4b683;
   --beige-dark: #BDB099;
   --beige-light: #D6C0AE;
-  /* Set background color to --black globally */
-  --bulma-body-background-color: var(--black);
   /* Borders */
   --border-cards: 8px;
   --border-containers: 16px;
@@ -39,6 +38,15 @@ BY: SHIRLEEN, LIZ, NATALIE, AND GEO
   --title-type-bold: 'Basteleur Bold';
   --title-type-light: 'Basteleur Moonlight';
   --body-type: 'Inter Tight';
+
+  /* Bulma Overrides */
+   /* Set background color to --black globally */
+  --bulma-body-background-color: var(--black);
+
+  /* Change primary color to --green using HSLA color values (mostly for generate and regenerate buttons) */
+  --bulma-primary-h: 72deg;
+  --bulma-primary-s: 47%;
+  --bulma-primary-l: 35%;
 }
 
 /* Viewport */
@@ -151,6 +159,7 @@ label { /* Labels for each question */
   flex-direction: row;
   gap: 8px;
 }
+
 #quoteText, #quoteAuthor { /* Custom text style to match palette */
   color: var(--black);
 }
