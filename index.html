@@ -10,171 +10,180 @@
 </head>
 
 <body>
-    <!-- Header with Bulma Navbar -GV -->
-    <header>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="/">Kitty Fortunes</a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
-                    <!-- Spans must be present to show hamburger menu on mobile -->
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
+    <div class="grid mb-0">
+        <div class="cell">
+            <!-- Header with Bulma Navbar -GV -->
+            <header>
+                <nav class="navbar" role="navigation" aria-label="main navigation">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="/">Kitty Fortunes</a>
+                        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                            data-target="navbarBasic">
+                            <!-- Spans must be present to show hamburger menu on mobile -->
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+    
+                    <div id="navbarBasic" class="navbar-menu">
+                        <div class="navbar-start"></div>
+                        <div class="navbar-end">
+                            <a class="navbar-item" href="/favorites.html">😻 Favorites</a>
+                            <a class="navbar-item" href="https://github.com/bumble-beed/kitty-fortunes/graphs/contributors"
+                                target="_blank">👤 Contributors</a>
+                            <a class="navbar-item" href="https://github.com/bumble-beed/kitty-fortunes" target="_blank">🗃️
+                                Repository</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column">
+                <main>
+                    <!-- Hero before app -GV -->
+                    <section id="heroSection">
+                        <p>Welcome to</p>
+                        <img src="./assets/images/landing-illustration.svg">
+                        <h2 id="siteTitle">Kitty Fortunes</h2>
+                        <p id="siteTagline">Discover your future with a purr-fect fortune from our feline friends!</p>
+                    </section>
 
-            <div id="navbarBasic" class="navbar-menu">
-                <div class="navbar-start"></div>
-                <div class="navbar-end">
-                    <a class="navbar-item" href="/favorites.html">😻 Favorites</a>
-                    <a class="navbar-item" href="https://github.com/bumble-beed/kitty-fortunes/graphs/contributors"
-                        target="_blank">👤 Contributors</a>
-                    <a class="navbar-item" href="https://github.com/bumble-beed/kitty-fortunes"
-                        target="_blank">🗃️ Repository</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Hero before app -GV -->
-        <section id="heroSection">
-            <p>Welcome to</p>
-            <img src="./assets/images/landing-illustration.svg">
-            <h2 id="siteTitle">Kitty Fortunes</h2>
-            <p id="siteTagline">Discover your future with a purr-fect fortune from our feline friends!</p>
-        </section>
-
-      <section id="app">
-        <!--Section A: Question Form-->
-            <section id="questionSection">
-                <h2 class="sectionTitle mb-6">Start Your Kitty Fortune</h2>
-                <form id="fortuneForm">
-                    <!-- I took out the option to select by mood because the Cat API is not super robust and doesn't have enough tagged images to create valid combos. E.g., choosing something like "relaxed" and then "calico" can return a 404 error with the API. It was too hard to manually figure out which were robust combos. Leaving this here in case anyone else better ideas on how to resolve. -NR -->
-
-                    <!--Mood Choice-->
-                    <!-- <label for="moodDropdown" class="form-label">What mood are you in?</label>
-                    <select class="form-select" id="moodDropdown">
-                        <option value="" disabled selected>Select your mood</option>
-                        <option value="confused">Confused</option>
-                        <option value="happy">Happy</option>
-                        <option value="relaxed">Relaxed</option>
-                        <option value="angry">Angry</option>
-                        <option value="annoyed">Annoyed</option>
-                        <option value="bored">Bored</option>
-                        <option value="silly">Silly</option>
-                        <option value="sleepy">Sleepy</option>
-                        <option value="sad">Sad</option>
-                        <option value="tired">Tired</option>
-                        <option value="playful">Playful</option>
-                    </select> -->
+                    <div class="columns">
+                        <div class="column is-two-fifths mx-auto formContainer">
+                            <!--Section A: Question Form-->
+                            <section id="questionSection">
+                                <h2 class="sectionTitle mb-6">Start Your Kitty Fortune</h2>
+                                <form id="fortuneForm">
+                                    <div class="control is-expanded has-text-centered">
+                                        <!-- 1st illustration -->
+                                        <img src="./assets/images/hero-illustration-p1.svg" class="formImg" />
+                                        <!-- 1st form label and title -->
+                                        <div class="is-inline-block">
+                                            <h3 class="has-text-left mb-2">01.</h3>
+                                            <label class="is-block mb-4" for="typeDropdown">Choose your cat style!</label>
+                                        </div>
                     
-                    <!-- Question Input: Recoded into Bulma component -GV -->
-                    <div class="control is-expanded has-text-centered">
-                        <!-- 1st illustration -->
-                        <img src="./assets/images/hero-illustration-p1.svg" class="formImg" />
-                        <!-- 1st form label and title -->
-                        <h3>01.</h3>
-                        <label class="is-block mb-4" for="typeDropdown">Choose your cat style!</label>
-
-                        <!-- 1st dropdown -->
-                        <div class="select is-fullwidth mb-6">
-                            <select class="formSelect" id="typeDropdown">
-                                <option value="" disabled selected>Pick a cat vibe</option>
-                                <option value="cute">Cute</option>
-                                <option value="funny">Funny</option>
-                                <option value="grumpy">Grumpy</option>
-                                <option value="sad">Sad</option>
-                                <option value="tabby">Tabby</option>
-                                <option value="calico">Calico</option>
-                                <option value="fluffy">Fluffy</option>
-                                <option value="orange">Orange</option>
-                                <option value="ginger">Ginger</option>
-                                <option value="grumpy">Grumpy</option>
-                                <option value="himalayan">Himalayan</option>
-                                <option value="nyan">Nyan</option>
-                                <option value="persian">Persian</option>
-                                <option value="siamese">Siamese</option>
-                                <option value="spooked">Spooked</option>
-                            </select>
+                                        <!-- 1st dropdown -->
+                                        <div class="control">
+                                            <div class="select is-fullwidth mb-6">
+                                                <select class="formSelect" id="typeDropdown">
+                                                    <option value="" disabled selected>Pick a cat vibe</option>
+                                                    <option value="cute">Cute</option>
+                                                    <option value="funny">Funny</option>
+                                                    <option value="grumpy">Grumpy</option>
+                                                    <option value="sad">Sad</option>
+                                                    <option value="tabby">Tabby</option>
+                                                    <option value="calico">Calico</option>
+                                                    <option value="fluffy">Fluffy</option>
+                                                    <option value="orange">Orange</option>
+                                                    <option value="ginger">Ginger</option>
+                                                    <option value="grumpy">Grumpy</option>
+                                                    <option value="himalayan">Himalayan</option>
+                                                    <option value="nyan">Nyan</option>
+                                                    <option value="persian">Persian</option>
+                                                    <option value="siamese">Siamese</option>
+                                                    <option value="spooked">Spooked</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Advice Topic Input: Recoded into Bulma component -GV -->
+                                    <div class="control is-expanded has-text-centered">
+                                        <!-- 2nd illustration -->
+                                        <img src="./assets/images/hero-illustration-p2.svg" class="formImg" />
+                                        <!-- 2nd form label and title -->
+                                        <div class="is-inline-block">
+                                            <h3 class="has-text-left mb-2">02.</h3>
+                                            <label class="is-block mb-4" for="topicDropdown">Pick your type of advice!</label>
+                                        </div>
+                    
+                                        <!-- 2nd dropdown -->
+                                        <div class="control">
+                                            <div class="select is-fullwidth mb-6">
+                                                <select class="formSelect" id="topicDropdown">
+                                                    <option value="" disabled selected>Select a topic</option>
+                                                    <option value="Business">Work</option>
+                                                    <option value="Love">Love</option>
+                                                    <option value="Friendship">Friendship</option>
+                                                    <option value="Life">Life</option>
+                                                    <option value="inspirational">Inspiration</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 3rd illustration -->
+                                    <img src="./assets/images/hero-illustration-p3.svg" class="formImg" />
+                                    <!-- 3rd form label and title -->
+                                    <div class="control has-text-centered">
+                                        <div class="is-inline-block">
+                                            <h3 class="has-text-left mb-2">03.</h3>
+                                            <label class="is-block mb-4">Generate your fortune!</label>
+                                        </div>
+                                    </div>
+                                    <!-- Generate and Surprise buttons -->
+                                    <div class="btnGroup my-5">
+                                        <button id="generateBtn" type="submit" class="button is-primary is-fullwidth">Generate
+                                            Fortune</button>
+                                        <button id="surpriseBtn" type="button" class="button is-secondary is-fullwidth">Surprise
+                                            Me</button>
+                                    </div>
+                                </form>
+                            </section>
+                    
+                            <!-- Section B: Result Display -->
+                            <section class="is-hidden" id="resultSection">
+                                <!-- Custom spacer -GV -->
+                                <div class="spacer-md"></div>
+                    
+                                <h2 class="sectionTitle my-5">Your Kitty Fortune</h2>
+                    
+                                <article class="fortuneCard">
+                                    <!-- Cat image placeholder -->
+                                    <img class="image is-square mx-auto mb-5" id="catImg" src="" alt="A prophetic cat image" />
+                    
+                                    <!-- Quote text -->
+                                    <p id="quoteText"></p>
+                    
+                                    <!-- Quote author -->
+                                    <p id="quoteAuthor"></p>
+                    
+                                    <!-- Flex div for action buttons -GV -->
+                                    <div class="btnGroup">
+                                        <button id="regenerateBtn" type="button" class="button is-fullwidth is-primary">
+                                            Regenerate
+                                        </button>
+                                        <button id="favoriteBtn" type="button" class="button is-fullwidth is-secondary">
+                                            Favorite
+                                        </button>
+                                    </div>
+                                </article>
+                            </section>
+                    
+                            <!--Section D: Errors-->
+                            <section class="has-text-danger is-hidden" id="errorMessage">
+                                <p>Something went wrong. Please try again.</p>
+                            </section>
                         </div>
                     </div>
 
-                    <!-- Advice Topic Input: Recoded into Bulma component -GV -->
-                    <div class="control is-expanded has-text-centered">
-                        <!-- 2nd illustration -->
-                        <img src="./assets/images/hero-illustration-p2.svg" class="formImg" />
-                        <!-- 2nd form label and title -->
-                        <h3>02.</h3>
-                        <label class="is-block mb-4" for="topicDropdown">Pick your type of advice!</label>
 
-                        <!-- 2nd dropdown -->
-                        <div class="select is-fullwidth mb-6">
-                            <select class="formSelect" id="topicDropdown">
-                                <option value="" disabled selected>Select a topic</option>
-                                <option value="Business">Work</option>
-                                <option value="Love">Love</option>
-                                <option value="Friendship">Friendship</option>
-                                <option value="Life">Life</option>
-                                <option value="inspirational">Inspiration</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- 3rd illustration -->
-                    <img src="./assets/images/hero-illustration-p3.svg" class="formImg" />
-                    <!-- 3rd form label and title -->
-                    <h3>03.</h3>
-                    <label class="is-block mb-4">Generate your fortune!</label>
-
-                    <!-- Generate and Surprise buttons -->
-                    <div class="btnGroup my-5">
-                        <button id="generateBtn" type="submit" class="button is-primary is-fullwidth">Generate Fortune</button>
-                        <button id="surpriseBtn" type="button" class="button is-secondary is-fullwidth">Surprise Me</button>
-                    </div>
-                </form>
-            </section>
-            
-            <!-- Section B: Result Display -->
-            <section class="is-hidden" id="resultSection">
-                <!-- Custom spacer -GV -->
-                <div class="spacer-md"></div>
-
-                <h2 class="sectionTitle my-5">Your Kitty Fortune</h2>
-
-                <article class="fortuneCard">
-                    <!-- Cat image placeholder -->
-                    <img class="image is-square mx-auto mb-5" id="catImg" src="" alt="A prophetic cat image" />
-
-                    <!-- Quote text -->
-                    <p id="quoteText"></p>
-
-                    <!-- Quote author -->
-                    <p id="quoteAuthor"></p>
-
-                    <!-- Flex div for action buttons -GV -->
-                    <div class="btnGroup">
-                        <button id="regenerateBtn" type="button" class="button is-fullwidth is-primary">
-                            Regenerate
-                        </button>
-                        <button id="favoriteBtn" type="button" class="button is-fullwidth is-secondary">
-                            Favorite
-                        </button>
-                    </div>
-                </article>
-            </section>
-
-            <!--Section D: Errors-->
-            <section class="has-text-danger is-hidden" id="errorMessage">
-                <p>Something went wrong. Please try again.</p>
-            </section>
-      </section>
-    </main>
-
-    <footer>
-        <p>Made with <span style="font-weight: bold; color: var(--red);"><3</span> by SNGL</p>
-    </footer>
+                
+                
+                </main>
+            </div>
+        </div>
+    
+        <footer>
+            <p>Made with <span style="font-weight: bold; color: var(--red);">
+                    <3</span> by SNGL</p>
+        </footer>
+    </div>
     <script src="./assets/js/script.js"></script>
 </body>
 

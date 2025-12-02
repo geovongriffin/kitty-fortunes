@@ -98,12 +98,13 @@ main { /* Handles flex as a column */
 }
 
 /* Form */
-#app { /* Container where all results live */
+/* Container where all results live */
+/* #app { 
   display: block;
   max-width: 800px;
   margin: auto;
   padding: 1.5rem;
-}
+} */
 .sectionTitle { /* Titles to indicate start of form */
   font-size: 1.2rem;
   font-family: var(--title-type-bold);
@@ -134,9 +135,9 @@ label { /* Labels for each question */
   font-size: 1.4rem;
   text-align: center;
 }
-#app h3 { /* Numbers above labels */
-  text-align: left;
-  margin-left: 16px!important;
+.formContainer h3 { /* Numbers above labels */
+  /* text-align: left;
+  margin-left: 16px!important; */
   line-height: 2.5rem;
   font-family: var(--title-type-bold);
   font-size: 2.6rem;
