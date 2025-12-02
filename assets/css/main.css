@@ -34,7 +34,6 @@ main {
   margin: 0 0 0.5rem; 
 }
 
-
 #siteTagline {
   font-size: 1.1rem;
   margin: 0;
@@ -61,4 +60,11 @@ section {
   max-width: 700px;
   margin: 0 auto 2rem;
   padding: 1.5rem;
+}
+
+body {
+  background-image: url(https://wall.alphacoders.com/big.php?i=1373567);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
