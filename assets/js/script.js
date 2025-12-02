@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // === FUNCTIONS
 async function fetchFortuneData(catType, quoteTopic) {
   
-  const catDataURL = `${CAT_URL}/cat/${catType}?type=square&json=true`;
+  const catDataURL = `${CAT_URL}/cat/${catType}&json=true`;
   const quoteURL = `${QUOTE_URL}/quotes/random?tags=${quoteTopic}`;
 
   try {
