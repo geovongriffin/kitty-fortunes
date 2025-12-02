@@ -85,6 +85,7 @@ function updateResults(catData, quoteData) {
     catImg.src = catData.url;
     quoteText.innerHTML = quoteData[0].content;
     quoteAuthor.innerHTML = quoteData[0].author;
+    console.log(catData);
 };
 
 function displayErrorMessage() {
