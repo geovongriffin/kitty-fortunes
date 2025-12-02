@@ -152,9 +152,9 @@ label { /* Labels for each question */
   background: var(--beige-light);
 }
 /* Cataas pictures */
-.fortuneCard img { 
+/* .fortuneCard img { 
   width: 100%;
-}
+} */
 
 .btnGroup { /* Allows flex direction: row on regen and fav buttons  */
   display: flex;
