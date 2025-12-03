@@ -99,16 +99,20 @@ favoriteBtn.addEventListener('click', (e) => {
 })
 
 function addToFavorites() {
+  //Show favorite icon
+  let favoriteIcon = document.getElementById('favoriteIcon');
+  favoriteIcon.classList.remove('is-hidden');
+  //Create unique identifier for each entry
   let date = Date.now();
   let favorite = {
     img: catImg.src,
     quoteContent: quoteText.innerHTML,
     quoteAuthor: quoteAuthor.innerHTML,
   }; 
-  let favoriteStr = JSON.stringify(favorite); 
+  let favoriteStr = JSON.stringify(favorite);
+  //Add entry to localstorage 
   localStorage.setItem(date, favoriteStr);
 };
 
 //To-dos (Stretch Goals)
 //figure out a way to apply proper sentence casing to quotes with JS
-//Apply "star" to card after user favorites a fortune

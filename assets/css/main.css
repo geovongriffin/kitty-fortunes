@@ -8,6 +8,7 @@ BY: SHIRLEEN, LIZ, NATALIE, AND GEO
 
 /* All Imports */
 @import "./node_modules/bulma/css/bulma.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 @font-face {
   font-family: 'Basteleur Moonlight';
@@ -151,6 +152,7 @@ label { /* Labels for each question */
 /* Cataas pictures */
 .fortuneCard img { 
   border-radius: 5px;
+  width: 100%;
 }
 
 .btnGroup { /* Allows flex direction: row on regen and fav buttons  */
@@ -165,6 +167,14 @@ label { /* Labels for each question */
 }
 #errorMessage { /* Error alignment fix */
   text-align: center;
+}
+
+.favoriteIcon {
+  position: absolute;
+  z-index: 1000;
+  right: 10px;
+  top: 10px;
+  filter: drop-shadow(4px 4px 10px var(--black));
 }
 
 /* Footer */

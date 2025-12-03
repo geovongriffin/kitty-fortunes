@@ -131,12 +131,18 @@
                                     </div>
                                     <!-- Generate and Surprise buttons -->
                                     <div class="btnGroup my-5">
-                                        <button id="generateBtn" type="submit"
-                                            class="button is-primary is-fullwidth has-background-primary-50">Generate
-                                            Fortune</button>
-                                        <button id="surpriseBtn" type="button"
-                                            class="button is-secondary is-fullwidth">Surprise
-                                            Me</button>
+                                        <button id="generateBtn" type="submit" class="button is-primary is-fullwidth has-background-primary-50">
+                                            <span class="icon">
+                                                <i class="bi bi-lightning-fill"></i>
+                                            </span>
+                                            <span>Generate Fortune</span>
+                                        </button>
+                                        <button id="surpriseBtn" type="button" class="button is-secondary is-fullwidth">
+                                            <span class="icon">
+                                                <i class="bi bi-magic"></i>
+                                            </span>
+                                            <span>Surprise me!</span>
+                                        </button>
                                     </div>
                                 </form>
                             </section>
@@ -150,8 +156,13 @@
 
                                 <article class="content fortuneCard">
                                     <!-- Cat image placeholder -->
-                                    <img class="image mx-auto mb-5" id="catImg" src=""
-                                        alt="A prophetic cat image" />
+                                    <figure class="is-relative">
+                                        <!-- Hide icon until user chooses to favorite -->
+                                        <span class="icon is-size-4 has-text-primary-light is-hidden favoriteIcon" id="favoriteIcon">
+                                            <i class="bi bi-bookmark-star-fill"></i>
+                                        </span>
+                                        <img class="image mx-auto mb-5" id="catImg" src="" alt="A prophetic cat image" />
+                                    </figure>
 
                                     <!-- Quote text -->
                                     <p id="quoteText"></p>
@@ -159,13 +170,21 @@
                                     <!-- Quote author -->
                                     <p id="quoteAuthor"></p>
 
+                                    
+
                                     <!-- Flex div for action buttons -GV -->
                                     <div class="btnGroup">
                                         <button id="regenerateBtn" type="button" class="button is-fullwidth is-primary has-background-primary-50">
-                                            Regenerate
+                                            <span class="icon">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </span>
+                                            <span>Regenerate</span>
                                         </button>
                                         <button id="favoriteBtn" type="button" class="button is-fullwidth is-secondary">
-                                            Favorite
+                                            <span class="icon">
+                                                <i class="bi bi-bookmark-star"></i>
+                                            </span>
+                                            <span>Favorite</span>
                                         </button>
                                     </div>
                                 </article>
