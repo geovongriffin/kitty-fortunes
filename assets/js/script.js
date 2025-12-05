@@ -61,17 +61,15 @@ regenerateBtn.addEventListener('click', (e) => {
   favoriteIcon.classList.add('is-hidden');
 });
 
-//a note about the changes to the event listeners: declaring catType again was overwriting the global const (array) you already declared previously, so it threw errors for me when i tested. i just renamed and redeclared them in the listener funcs (both for consistency) to ensure they remained within their scope. -GV
-
 //Surprise button
 surpriseBtn.addEventListener('click', (e) => {
-  e.preventDefault(); //the () was missing on this!
+  e.preventDefault(); 
   surpriseMe();
 });
 
 //Favorite button
 favoriteBtn.addEventListener('click', (e) => {
-  e.preventDefault(); //the () was missing on this!
+  e.preventDefault();
   addToFavorites();
 });
 
