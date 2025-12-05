@@ -17,7 +17,7 @@ const regenerateBtn = document.getElementById('regenerateBtn');
 const favoriteBtn = document.getElementById('favoriteBtn');
 const favoriteIcon = document.getElementById('favoriteIcon');
 
-const catType = [
+const catTypeArr = [
   "cute",
   "funny",
   "grumpy",
@@ -34,7 +34,7 @@ const catType = [
   "spooked"
 ];
 
-const adviceTopic = [
+const adviceTopicArr = [
   "Business",
   "Love",
   "Friendship",
@@ -140,8 +140,8 @@ function displayErrorMessage() {
 //Show random selection when user selects "surprise me" button
 function surpriseMe() {
   //Generate random number based on array length
-  const randomCat = catType[Math.floor(Math.random() * catType.length)];
-  const randomAdvice = adviceTopic[Math.floor(Math.random() * adviceTopic.length)];
+  const randomCat = catTypeArr[Math.floor(Math.random() * catTypeArr.length)];
+  const randomAdvice = adviceTopicArr[Math.floor(Math.random() * adviceTopicArr.length)];
   fetchFortuneData(randomCat, randomAdvice);
   //Hide favorite icon
   favoriteIcon.classList.add('is-hidden');
