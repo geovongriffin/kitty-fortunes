@@ -1,10 +1,9 @@
-
 # Kitty Fortunes
 
 <!-- ![Screenshot of Kitty Fortunes homepage](./assets/images/demo-landing.png)
 ![Screenshot of our Favorite Fortunes page](./assets/images/demo-favorites.png) -->
-<div><img src="assets/images/demo-landing.png" width="48%"/>
-<img src="assets/images/demo-favorites.png" width="48%"/></div>
+<div><img src="assets/images/demo-landing.png" width="49%"/>
+<img src="assets/images/demo-favorites.png" width="49%"/></div>
 
 ![Animated gif demoing the site](./assets/images/kittyFortunesDemo.gif)
 
