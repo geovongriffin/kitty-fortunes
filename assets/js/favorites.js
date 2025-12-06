@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     } else {
-        favoritesSection.innerHTML = `<p class="has-text-centered" style="min-height:82vh;">Sorry, you don't have any favorites yet.</p>`
+        favoritesSection.innerHTML = `<p class="has-text-centered" style="min-height:70vh;">Sorry, you don't have any favorites yet.</p>`
     }
 });
 
