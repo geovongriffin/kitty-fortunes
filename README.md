@@ -31,15 +31,15 @@ Welcome to Kitty Fortunes, a lighthearted web app created for the purpose of gen
 ## Technologies Used
 
 ### Our Stack
-- <i class="bi bi-filetype-html"></i> HTML5
-- <i class="bi bi-filetype-css"></i> CSS3
-- <i class="bi bi-filetype-js"></i> JavaScript
-- <i class="bi bi-palette2"></i> [Bulma](https://bulma.io/)
+- HTML5
+- CSS3
+- JavaScript
+- [Bulma](https://bulma.io/)
 
 
 ### Core APIs
-- <i class="bi bi-journal-code"></i> [Cat As A Service](https://cataas.com/) by Kevin Balicot
-- <i class="bi bi-journal-code"></i> [Quotable](https://github.com/lukePeavey/quotable) by Luke Peavey
+- [Cat As A Service](https://cataas.com/) by Kevin Balicot
+- [Quotable](https://github.com/lukePeavey/quotable) by Luke Peavey
 
 ## Contributors
  - Liz 😻 HTML, Page Structure
