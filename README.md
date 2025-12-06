@@ -1,9 +1,17 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 # Kitty Fortunes
 
-![Screenshot of Kitty Fortunes homepage](./assets/images/demo-landing.png)
-![Screenshot of our Favorite Fortunes page](./assets/images/demo-favorites.png)
+<!-- ![Screenshot of Kitty Fortunes homepage](./assets/images/demo-landing.png)
+![Screenshot of our Favorite Fortunes page](./assets/images/demo-favorites.png) -->
+<div><img src="assets/images/demo-landing.png" width="48%"/>
+<img src="assets/images/demo-favorites.png" width="48%"/></div>
 
-[Visit the live site here.](https://geovongriffin.github.io/kitty-fortunes/)
+![Animated gif demoing the site](./assets/images/kittyFortunesDemo.gif)
+
+## Live Site
+
+👉🏼 👉🏼 👉🏼 [Visit the live site](https://geovongriffin.github.io/kitty-fortunes/) 👈🏼 👈🏼 👈🏼
 
 ## Description
 
@@ -25,14 +33,15 @@ Welcome to Kitty Fortunes, a lighthearted web app created for the purpose of gen
 ## Technologies Used
 
 ### Our Stack
-- HTML5
-- CSS3
-- [Bulma](https://bulma.io/)
-- JavaScript
+- <i class="bi bi-filetype-html"></i> HTML5
+- <i class="bi bi-filetype-css"></i> CSS3
+- <i class="bi bi-filetype-js"></i> JavaScript
+- <i class="bi bi-palette2"></i> [Bulma](https://bulma.io/)
+
 
 ### Core APIs
-- [Cat As A Service](https://cataas.com/) by Kevin Balicot
-- [Quotable](https://github.com/lukePeavey/quotable) by Luke Peavey
+- <i class="bi bi-journal-code"></i> [Cat As A Service](https://cataas.com/) by Kevin Balicot
+- <i class="bi bi-journal-code"></i> [Quotable](https://github.com/lukePeavey/quotable) by Luke Peavey
 
 ## Contributors
  - Liz 😻 HTML, Page Structure
